@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div className="App">
-<span>Hey</span>
+<img src="../images/bg-triangle.svg"></img>
     </div>
   )
 }
