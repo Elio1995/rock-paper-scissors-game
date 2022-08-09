@@ -31,9 +31,10 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  place-items: baseline;
   min-width: 320px;
   min-height: 100vh;
+  justify-content: center;
 }
 
 h1 {
