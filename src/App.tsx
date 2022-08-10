@@ -56,47 +56,70 @@ function App() {
         </div>
         <div
           style={{
-            marginTop: "250px",
+            marginTop: "150px",
             display: "flex",
             placeContent: "center",
           }}
         >
-          <img src="../images/bg-triangle.svg"></img>
+          <div style={{ display: "grid", gridTemplateRows: "auto auto" }}>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "100px",
+              }}
+            >
+              <img
+                style={{
+                  backgroundColor: "white",
+                  padding: "40px",
+                  border: "solid 30px hsl(230, 89%, 65%)",
+                  borderRadius: "150px",
+                  boxShadow: "inset 3px 8px 10px grey",
+                  zIndex: "1",
+                }}
+                src="../images/icon-paper.svg"
+              ></img>
+              <img
+                style={{
+                  backgroundColor: "white",
+                  padding: "40px",
+                  border: "solid 30px hsl(349, 71%, 52%)",
+                  borderRadius: "150px",
+                  boxShadow: "inset 3px 8px 10px grey",
+                  textAlign: "center",
+                  zIndex: "1",
+                }}
+                src="../images/icon-rock.svg"
+              ></img>
+            </div>
+            <div
+              style={{
+                display: "grid",
+                placeContent: "center",
+                marginTop: "50px",
+              }}
+            >
+              <img
+                style={{
+                  backgroundColor: "white",
+                  padding: "40px",
+                  border: "solid 30px hsl(39, 89%, 49%)",
+                  borderRadius: "150px",
+                  boxShadow: "inset 3px 8px 10px grey",
+                  zIndex: "1",
+                }}
+                src="../images/icon-scissors.svg"
+              ></img>
+            </div>
+          </div>
           <img
             style={{
-              backgroundColor: "white",
               position: "absolute",
-              top: "300px",
-              left: "550px",
-              padding: "40px",
-              border: "solid 30px hsl(230, 89%, 65%)",
-              borderRadius: "150px",
+              marginTop: "100px",
+              overflow: "hidden",
             }}
-            src="../images/icon-paper.svg"
-          ></img>
-          <img
-            style={{
-              backgroundColor: "white",
-              position: "absolute",
-              bottom: "220px",
-              right: "670px",
-              padding: "40px",
-              border: "solid 30px hsl(349, 71%, 52%)",
-              borderRadius: "150px",
-            }}
-            src="../images/icon-rock.svg"
-          ></img>
-          <img
-            style={{
-              backgroundColor: "white",
-              position: "absolute",
-              top: "300px",
-              right: "550px",
-              padding: "40px",
-              border: "solid 30px hsl(39, 89%, 49%)",
-              borderRadius: "150px",
-            }}
-            src="../images/icon-scissors.svg"
+            src="../images/bg-triangle.svg"
           ></img>
         </div>
       </div>
