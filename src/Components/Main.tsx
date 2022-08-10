@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "../App.css";
+import HousePicked from "./HousePicked";
+import PaperImage from "./PaperImage";
+import RockImage from "./RockImage";
+import ScissorsImage from "./ScissorsImage";
+import YouPicked from "./YouPicked";
 
 export default function Main() {
   const [userSelect, setUserSelect] = useState("");
   const houseChoiceArray = ["paper", "scissors", "rock"];
   var houseSelect =
     houseChoiceArray[Math.floor(Math.random() * houseChoiceArray.length)];
-
-  console.log("userSelect", userSelect);
-  console.log("houseSelect", houseSelect);
 
   return (
     <>
@@ -36,40 +38,14 @@ export default function Main() {
                 gap: "100px",
               }}
             >
-              <img
-                style={{
-                  backgroundColor: "white",
-                  padding: "40px",
-                  border: "solid 25px hsl(230, 89%, 65%)",
-                  borderRadius: "150px",
-                  boxShadow: "inset 3px 8px 10px grey",
-                  zIndex: "1",
-                  cursor: "pointer",
-                  height: "200px",
-                  width: "200px",
-                }}
-                src="../images/icon-paper.svg"
-                onClick={() => {
-                  return setUserSelect("paper");
-                }}
-              ></img>
-              <img
-                style={{
-                  backgroundColor: "white",
-                  padding: "40px",
-                  border: "solid 25px hsl(39, 89%, 49%)",
-                  borderRadius: "150px",
-                  boxShadow: "inset 3px 8px 10px grey",
-                  zIndex: "1",
-                  cursor: "pointer",
-                  height: "200px",
-                  width: "200px",
-                }}
-                src="../images/icon-scissors.svg"
-                onClick={() => {
-                  return setUserSelect("scissors");
-                }}
-              ></img>
+              <PaperImage
+                userSelect={userSelect}
+                setUserSelect={setUserSelect}
+              />
+              <ScissorsImage
+                userSelect={userSelect}
+                setUserSelect={setUserSelect}
+              />
             </div>
             <div
               style={{
@@ -78,23 +54,10 @@ export default function Main() {
                 marginTop: "50px",
               }}
             >
-              <img
-                style={{
-                  backgroundColor: "white",
-                  padding: "40px",
-                  border: "solid 25px hsl(349, 71%, 52%)",
-                  borderRadius: "150px",
-                  boxShadow: "inset 3px 8px 10px grey",
-                  zIndex: "1",
-                  cursor: "pointer",
-                  height: "200px",
-                  width: "200px",
-                }}
-                src="../images/icon-rock.svg"
-                onClick={() => {
-                  return setUserSelect("rock");
-                }}
-              ></img>
+              <RockImage
+                userSelect={userSelect}
+                setUserSelect={setUserSelect}
+              />
             </div>
           </div>
         </div>
@@ -106,150 +69,8 @@ export default function Main() {
             gridTemplateColumns: "1fr 1fr",
           }}
         >
-          <div
-            style={{
-              display: "grid",
-              placeContent: "center",
-            }}
-          >
-            <p>YOU PICKED</p>
-            <div
-              style={{
-                backgroundColor: "#16223f",
-                width: "200px",
-                height: "200px",
-                borderRadius: "100px",
-                marginTop: "50px",
-              }}
-            >
-              {userSelect === "paper" ? (
-                <img
-                  style={{
-                    backgroundColor: "white",
-                    padding: "40px",
-                    border: "solid 25px hsl(230, 89%, 65%)",
-                    borderRadius: "150px",
-                    boxShadow: "inset 3px 8px 10px grey",
-                    zIndex: "1",
-                    cursor: "pointer",
-                    height: "200px",
-                    width: "200px",
-                  }}
-                  src="../images/icon-paper.svg"
-                ></img>
-              ) : userSelect === "rock" ? (
-                <img
-                  style={{
-                    backgroundColor: "white",
-                    padding: "40px",
-                    border: "solid 25px hsl(349, 71%, 52%)",
-                    borderRadius: "150px",
-                    boxShadow: "inset 3px 8px 10px grey",
-                    zIndex: "1",
-                    cursor: "pointer",
-                    height: "200px",
-                    width: "200px",
-                  }}
-                  src="../images/icon-rock.svg"
-                  onClick={() => {
-                    return setUserSelect("rock");
-                  }}
-                ></img>
-              ) : userSelect === "scissors" ? (
-                <img
-                  style={{
-                    backgroundColor: "white",
-                    padding: "40px",
-                    border: "solid 25px hsl(39, 89%, 49%)",
-                    borderRadius: "150px",
-                    boxShadow: "inset 3px 8px 10px grey",
-                    zIndex: "1",
-                    cursor: "pointer",
-                    height: "200px",
-                    width: "200px",
-                  }}
-                  src="../images/icon-scissors.svg"
-                  onClick={() => {
-                    return setUserSelect("scissors");
-                  }}
-                ></img>
-              ) : (
-                ""
-              )}
-            </div>
-          </div>
-          <div
-            style={{
-              display: "grid",
-              placeContent: "center",
-            }}
-          >
-            <p>THE HOUSE PICKED</p>
-            <div
-              style={{
-                backgroundColor: "#16223f",
-                width: "200px",
-                height: "200px",
-                borderRadius: "100px",
-                marginTop: "50px",
-              }}
-            >
-              {houseSelect === "paper" ? (
-                <img
-                  style={{
-                    backgroundColor: "white",
-                    padding: "40px",
-                    border: "solid 25px hsl(230, 89%, 65%)",
-                    borderRadius: "150px",
-                    boxShadow: "inset 3px 8px 10px grey",
-                    zIndex: "1",
-                    cursor: "pointer",
-                    height: "200px",
-                    width: "200px",
-                  }}
-                  src="../images/icon-paper.svg"
-                ></img>
-              ) : houseSelect === "rock" ? (
-                <img
-                  style={{
-                    backgroundColor: "white",
-                    padding: "40px",
-                    border: "solid 25px hsl(349, 71%, 52%)",
-                    borderRadius: "150px",
-                    boxShadow: "inset 3px 8px 10px grey",
-                    zIndex: "1",
-                    cursor: "pointer",
-                    height: "200px",
-                    width: "200px",
-                  }}
-                  src="../images/icon-rock.svg"
-                  onClick={() => {
-                    return setUserSelect("rock");
-                  }}
-                ></img>
-              ) : houseSelect === "scissors" ? (
-                <img
-                  style={{
-                    backgroundColor: "white",
-                    padding: "40px",
-                    border: "solid 25px hsl(39, 89%, 49%)",
-                    borderRadius: "150px",
-                    boxShadow: "inset 3px 8px 10px grey",
-                    zIndex: "1",
-                    cursor: "pointer",
-                    height: "200px",
-                    width: "200px",
-                  }}
-                  src="../images/icon-scissors.svg"
-                  onClick={() => {
-                    return setUserSelect("scissors");
-                  }}
-                ></img>
-              ) : (
-                ""
-              )}
-            </div>
-          </div>
+          <YouPicked userSelect={userSelect} />
+          <HousePicked houseSelect={houseSelect} />
         </div>
       )}
     </>
