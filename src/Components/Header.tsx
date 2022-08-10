@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 
-export default function Header() {
+export default function Header(props: any) {
   return (
     <>
       <div
@@ -49,7 +49,7 @@ export default function Header() {
               color: "hsl(229, 25%, 31%)",
             }}
           >
-            12
+            {props.score}
           </p>
         </div>
       </div>

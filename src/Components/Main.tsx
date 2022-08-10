@@ -7,11 +7,29 @@ import RockImage from "./RockImage";
 import ScissorsImage from "./ScissorsImage";
 import YouPicked from "./YouPicked";
 
-export default function Main() {
+export default function Main(props: any) {
   const [userSelect, setUserSelect] = useState("");
   const houseChoiceArray = ["paper", "scissors", "rock"];
   var houseSelect =
     houseChoiceArray[Math.floor(Math.random() * houseChoiceArray.length)];
+
+  {
+    userSelect === houseSelect
+      ? props.setScore(props.score)
+      : userSelect === "paper" && houseSelect === "scissors"
+      ? props.setScore(props.score - 1)
+      : userSelect === "paper" && houseSelect === "rock"
+      ? props.setScore(props.score + 1)
+      : userSelect === "scissors" && houseSelect === "paper"
+      ? props.setScore(props.score + 1)
+      : userSelect === "scissors" && houseSelect === "rock"
+      ? props.setScore(props.score - 1)
+      : userSelect === "rock" && houseSelect === "scissors"
+      ? props.setScore(props.score + 1)
+      : userSelect === "rock" && houseSelect === "paper"
+      ? props.setScore(props.score - 1)
+      : "";
+  }
 
   return (
     <>
@@ -75,6 +93,8 @@ export default function Main() {
             userSelect={userSelect}
             houseSelect={houseSelect}
             setUserSelect={setUserSelect}
+            setScore={props.setScore}
+            score={props.score}
           />
           <HousePicked houseSelect={houseSelect} />
         </div>
