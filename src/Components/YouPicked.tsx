@@ -9,7 +9,7 @@ export default function YouPicked(props: any) {
     <div
       style={{
         display: "grid",
-        placeContent: "center",
+        placeContent: "start",
       }}
     >
       <p>YOU PICKED</p>

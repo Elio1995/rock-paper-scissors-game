@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import HousePicked from "./HousePicked";
 import PaperImage from "./PaperImage";
+import Result from "./Result";
 import RockImage from "./RockImage";
 import ScissorsImage from "./ScissorsImage";
 import YouPicked from "./YouPicked";
@@ -66,10 +67,15 @@ export default function Main() {
           style={{
             marginTop: "150px",
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gridTemplateColumns: "auto auto auto",
           }}
         >
           <YouPicked userSelect={userSelect} />
+          <Result
+            userSelect={userSelect}
+            houseSelect={houseSelect}
+            setUserSelect={setUserSelect}
+          />
           <HousePicked houseSelect={houseSelect} />
         </div>
       )}

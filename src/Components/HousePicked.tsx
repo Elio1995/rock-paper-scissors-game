@@ -9,7 +9,7 @@ export default function HousePicked(props: any) {
     <div
       style={{
         display: "grid",
-        placeContent: "center",
+        placeContent: "end",
       }}
     >
       <p>THE HOUSE PICKED</p>
