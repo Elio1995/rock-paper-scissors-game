@@ -3,8 +3,12 @@ import "../App.css";
 
 export default function Main() {
   const [userSelect, setUserSelect] = useState("");
+  const houseChoiceArray = ["paper", "scissors", "rock"];
+  var houseSelect =
+    houseChoiceArray[Math.floor(Math.random() * houseChoiceArray.length)];
 
   console.log("userSelect", userSelect);
+  console.log("houseSelect", houseSelect);
 
   return (
     <>
@@ -189,7 +193,62 @@ export default function Main() {
                 borderRadius: "100px",
                 marginTop: "50px",
               }}
-            ></div>
+            >
+              {houseSelect === "paper" ? (
+                <img
+                  style={{
+                    backgroundColor: "white",
+                    padding: "40px",
+                    border: "solid 25px hsl(230, 89%, 65%)",
+                    borderRadius: "150px",
+                    boxShadow: "inset 3px 8px 10px grey",
+                    zIndex: "1",
+                    cursor: "pointer",
+                    height: "200px",
+                    width: "200px",
+                  }}
+                  src="../images/icon-paper.svg"
+                ></img>
+              ) : houseSelect === "rock" ? (
+                <img
+                  style={{
+                    backgroundColor: "white",
+                    padding: "40px",
+                    border: "solid 25px hsl(349, 71%, 52%)",
+                    borderRadius: "150px",
+                    boxShadow: "inset 3px 8px 10px grey",
+                    zIndex: "1",
+                    cursor: "pointer",
+                    height: "200px",
+                    width: "200px",
+                  }}
+                  src="../images/icon-rock.svg"
+                  onClick={() => {
+                    return setUserSelect("rock");
+                  }}
+                ></img>
+              ) : houseSelect === "scissors" ? (
+                <img
+                  style={{
+                    backgroundColor: "white",
+                    padding: "40px",
+                    border: "solid 25px hsl(39, 89%, 49%)",
+                    borderRadius: "150px",
+                    boxShadow: "inset 3px 8px 10px grey",
+                    zIndex: "1",
+                    cursor: "pointer",
+                    height: "200px",
+                    width: "200px",
+                  }}
+                  src="../images/icon-scissors.svg"
+                  onClick={() => {
+                    return setUserSelect("scissors");
+                  }}
+                ></img>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
         </div>
       )}
