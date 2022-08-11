@@ -1,30 +1,25 @@
 import React, { useState } from "react";
-import Header from "./Components/Header";
-import Main from "./Components/Main";
+import TheGame from "./Pages/TheGame";
 import "./App.css";
+import RuleModal from "./Components/RuleModal";
 
 function App() {
   const [score, setScore] = useState(0);
+  const [modal, setModal] = useState(false);
+
+  const close = () => {
+    setModal(false);
+  };
+
   return (
     <>
-      <div className="App">
-        <Header setScore={setScore} score={score} />
-        <Main setScore={setScore} score={score} />
-      </div>
-      <p
-        style={{
-          position: "absolute",
-          bottom: "50px",
-          right: "100px",
-          border: "solid 1px white",
-          padding: "10px 45px",
-          borderRadius: "10px",
-          fontSize: "18px",
-          fontWeight: "700",
-        }}
-      >
-        Rules
-      </p>
+      <TheGame
+        score={score}
+        setScore={setScore}
+        modal={modal}
+        setModal={setModal}
+      />
+      <RuleModal modal={modal} setModal={setModal} close={close} />
     </>
   );
 }

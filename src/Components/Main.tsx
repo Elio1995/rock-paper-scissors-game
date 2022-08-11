@@ -13,23 +13,23 @@ export default function Main(props: any) {
   var houseSelect =
     houseChoiceArray[Math.floor(Math.random() * houseChoiceArray.length)];
 
-  {
-    userSelect === houseSelect
-      ? props.setScore(props.score)
-      : userSelect === "paper" && houseSelect === "scissors"
-      ? props.setScore(props.score - 1)
-      : userSelect === "paper" && houseSelect === "rock"
-      ? props.setScore(props.score + 1)
-      : userSelect === "scissors" && houseSelect === "paper"
-      ? props.setScore(props.score + 1)
-      : userSelect === "scissors" && houseSelect === "rock"
-      ? props.setScore(props.score - 1)
-      : userSelect === "rock" && houseSelect === "scissors"
-      ? props.setScore(props.score + 1)
-      : userSelect === "rock" && houseSelect === "paper"
-      ? props.setScore(props.score - 1)
-      : "";
-  }
+  // {
+  //   userSelect === houseSelect
+  //     ? props.setScore(props.score)
+  //     : userSelect === "paper" && houseSelect === "scissors"
+  //     ? props.setScore(props.score - 1)
+  //     : userSelect === "paper" && houseSelect === "rock"
+  //     ? props.setScore(props.score + 1)
+  //     : userSelect === "scissors" && houseSelect === "paper"
+  //     ? props.setScore(props.score + 1)
+  //     : userSelect === "scissors" && houseSelect === "rock"
+  //     ? props.setScore(props.score - 1)
+  //     : userSelect === "rock" && houseSelect === "scissors"
+  //     ? props.setScore(props.score + 1)
+  //     : userSelect === "rock" && houseSelect === "paper"
+  //     ? props.setScore(props.score - 1)
+  //     : "";
+  // }
 
   return (
     <>
