@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
 import HousePicked from "./HousePicked";
+import Loading from "./Loading";
 import PaperImage from "./PaperImage";
 import Result from "./Result";
 import RockImage from "./RockImage";
@@ -9,11 +10,18 @@ import YouPicked from "./YouPicked";
 
 export default function Main(props: any) {
   const [userSelect, setUserSelect] = useState("");
+  const [done, setDone] = useState(false);
 
   const houseChoiceArray = ["paper", "scissors", "rock"];
 
   var houseSelect =
     houseChoiceArray[Math.floor(Math.random() * houseChoiceArray.length)];
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDone(true);
+    }, 3000);
+  }, [userSelect]);
 
   // {
   //   userSelect === houseSelect
@@ -82,6 +90,8 @@ export default function Main(props: any) {
             </div>
           </div>
         </div>
+      ) : !done ? (
+        <Loading />
       ) : (
         <div
           style={{
@@ -95,6 +105,7 @@ export default function Main(props: any) {
             userSelect={userSelect}
             houseSelect={houseSelect}
             setUserSelect={setUserSelect}
+            setDone={setDone}
             setScore={props.setScore}
             score={props.score}
           />
