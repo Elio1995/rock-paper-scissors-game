@@ -9,20 +9,11 @@ import YouPicked from "./YouPicked";
 
 export default function Main(props: any) {
   const [userSelect, setUserSelect] = useState("");
-  const [houseSelect, setHouseSelect] = useState("");
-  //
+
   const houseChoiceArray = ["paper", "scissors", "rock"];
 
-  var randomItem =
+  var houseSelect =
     houseChoiceArray[Math.floor(Math.random() * houseChoiceArray.length)];
-
-  useEffect(() => {
-    setTimeout(() => {
-      setHouseSelect(randomItem);
-    }, 3000);
-  }, []);
-
-  console.log(houseSelect);
 
   // {
   //   userSelect === houseSelect
@@ -104,7 +95,6 @@ export default function Main(props: any) {
             userSelect={userSelect}
             houseSelect={houseSelect}
             setUserSelect={setUserSelect}
-            setHouseSelect={setHouseSelect}
             setScore={props.setScore}
             score={props.score}
           />

@@ -48,7 +48,7 @@ export default function Result(props: any) {
           color: "hsl(237, 49%, 15%)",
         }}
         onClick={() => {
-          return props.setUserSelect("") || props.setHouseSelect("");
+          return props.setUserSelect("");
         }}
       >
         <span>PLAY AGAIN</span>
