@@ -90,8 +90,6 @@ export default function Main(props: any) {
             </div>
           </div>
         </div>
-      ) : !done ? (
-        <Loading />
       ) : (
         <div
           style={{
@@ -109,7 +107,7 @@ export default function Main(props: any) {
             setScore={props.setScore}
             score={props.score}
           />
-          <HousePicked houseSelect={houseSelect} />
+          {!done ? <Loading /> : <HousePicked houseSelect={houseSelect} />}
         </div>
       )}
     </>
