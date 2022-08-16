@@ -12,7 +12,7 @@ export default function Loading(props: any) {
       >
         <p>THE HOUSE PICKED</p>
         <div
-          className="loading"
+          className="box"
           style={{
             backgroundColor: "#16223f",
             width: "200px",
@@ -21,7 +21,12 @@ export default function Loading(props: any) {
             marginTop: "50px",
           }}
         >
-          <img className="loader" alt=""></img>
+          <div className="container">
+            <span className="circle"></span>
+            <span className="circle"></span>
+            <span className="circle"></span>
+            <span className="circle"></span>
+          </div>
         </div>
       </div>
     </>
