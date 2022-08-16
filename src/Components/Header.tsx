@@ -6,9 +6,9 @@ export default function Header(props: any) {
     <>
       <div
         style={{
-          textAlign: "start",
           display: "grid",
-          gridTemplateColumns: "1fr 110px",
+          justifyContent: "center",
+          placeContent: "center",
           border: "solid 2px grey",
           padding: "20px",
           borderRadius: "10px",
@@ -24,34 +24,6 @@ export default function Header(props: any) {
           <li style={{ marginTop: "3px" }}>PAPER</li>
           <li style={{ marginTop: "3px" }}>SCISSORS</li>
         </ul>
-        <div
-          style={{
-            textAlign: "center",
-            backgroundColor: "white",
-            paddingTop: "4px",
-            borderRadius: "10px",
-          }}
-        >
-          <span
-            style={{
-              fontSize: "12px",
-              color: "hsl(229, 64%, 46%)",
-              fontWeight: "700",
-            }}
-          >
-            SCORE
-          </span>
-          <p
-            style={{
-              marginTop: "15px",
-              fontSize: "46px",
-              fontWeight: "700",
-              color: "hsl(229, 25%, 31%)",
-            }}
-          >
-            {props.score}
-          </p>
-        </div>
       </div>
     </>
   );

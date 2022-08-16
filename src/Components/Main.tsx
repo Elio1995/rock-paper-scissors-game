@@ -20,7 +20,7 @@ export default function Main(props: any) {
   useEffect(() => {
     setTimeout(() => {
       setDone(true);
-    }, 3000);
+    }, 4000);
   }, [userSelect]);
 
   // {
