@@ -23,50 +23,13 @@ export default function Main(props: any) {
     }, 4000);
   }, [userSelect]);
 
-  // {
-  //   userSelect === houseSelect
-  //     ? props.setScore(props.score)
-  //     : userSelect === "paper" && houseSelect === "scissors"
-  //     ? props.setScore(props.score - 1)
-  //     : userSelect === "paper" && houseSelect === "rock"
-  //     ? props.setScore(props.score + 1)
-  //     : userSelect === "scissors" && houseSelect === "paper"
-  //     ? props.setScore(props.score + 1)
-  //     : userSelect === "scissors" && houseSelect === "rock"
-  //     ? props.setScore(props.score - 1)
-  //     : userSelect === "rock" && houseSelect === "scissors"
-  //     ? props.setScore(props.score + 1)
-  //     : userSelect === "rock" && houseSelect === "paper"
-  //     ? props.setScore(props.score - 1)
-  //     : "";
-  // }
-
   return (
     <>
       {userSelect === "" ? (
-        <div
-          style={{
-            marginTop: "150px",
-            display: "flex",
-            placeContent: "center",
-          }}
-        >
-          <img
-            style={{
-              position: "absolute",
-              marginTop: "100px",
-              overflow: "hidden",
-            }}
-            src="../images/bg-triangle.svg"
-          ></img>
+        <div className="emptyUser">
+          <img className="triangleImage" src="../images/bg-triangle.svg"></img>
           <div style={{ display: "grid", gridTemplateRows: "auto auto" }}>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "100px",
-              }}
-            >
+            <div className="paperScissorsGrid">
               <PaperImage
                 userSelect={userSelect}
                 setUserSelect={setUserSelect}
@@ -76,13 +39,7 @@ export default function Main(props: any) {
                 setUserSelect={setUserSelect}
               />
             </div>
-            <div
-              style={{
-                display: "grid",
-                placeContent: "center",
-                marginTop: "50px",
-              }}
-            >
+            <div className="rockGrid">
               <RockImage
                 userSelect={userSelect}
                 setUserSelect={setUserSelect}
@@ -91,13 +48,7 @@ export default function Main(props: any) {
           </div>
         </div>
       ) : (
-        <div
-          style={{
-            marginTop: "150px",
-            display: "grid",
-            gridTemplateColumns: "auto auto auto",
-          }}
-        >
+        <div className="selectedUser">
           <YouPicked userSelect={userSelect} />
           <Result
             userSelect={userSelect}

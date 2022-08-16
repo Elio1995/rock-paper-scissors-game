@@ -5,14 +5,118 @@
   text-align: center;
 }
 
+/* HEADER */
+.header {
+  display: grid;
+  justify-content: center;
+  place-content: center;
+  border: solid 2px grey;
+  padding: 20px;
+  border-radius: 10px;
+}
+.header ul {
+  font-size: 32px;
+  font-weight: 900;
+}
+.header ul li {
+  margin-top: 3px;
+}
+
+/* MAIN */
+.emptyUser {
+  margin-top: 150px;
+  display: flex;
+  place-content: center;
+}
+.emptyUser .triangleImage {
+  position: absolute;
+  margin-top: 100px;
+  overflow: hidden;
+}
+.emptyUser .paperScissorsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+.emptyUser .rockGrid {
+  display: grid;
+  place-content: center;
+  margin-top: 50px;
+}
+.selectedUser {
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.paperImage {
+  background-color: white;
+  padding: 40px;
+  border: solid 25px hsl(230, 89%, 65%);
+  border-radius: 150px;
+  box-shadow: inset 3px 8px 10px grey;
+  z-index: 1;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+}
+.rockImage {
+  background-color: white;
+  padding: 40px;
+  border: solid 25px hsl(349, 71%, 52%);
+  border-radius: 150px;
+  box-shadow: inset 3px 8px 10px grey;
+  z-index: 1;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+}
+.scissorsImage {
+  background-color: white;
+  padding: 40px;
+  border: solid 25px hsl(39, 89%, 49%);
+  border-radius: 150px;
+  box-shadow: inset 3px 8px 10px grey;
+  z-index: 1;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+}
+.pickedDiv {
+  background-color: #16223f;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin-top: 50px;
+}
+
+/* RESULT */
+.result {
+  margin-top: 50px;
+  display: grid;
+  place-content: center;
+}
+.result p {
+  font-size: 30px;
+  margin: 0px 20px;
+  font-weight: 900;
+}
+.result .playAgain {
+  margin-top: 20px;
+  background-color: white;
+  color: hsl(237, 49%, 15%);
+}
+
+/* LOADING */
 .box {
-  width: 300px;
-  height: 300px;
-  background: #1a237e;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  background-color: "#16223f";
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin-top: 50px;
 }
 
 .container {
@@ -62,4 +166,46 @@
   to {
     transform: translateX(45px);
   }
+}
+
+/* MODAL */
+.rulesButton {
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  border: solid 1px white;
+  background-color: transparent;
+  padding: 10px 45px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.modalContent {
+  background-color: white;
+  background-size: cover;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 500px;
+  z-index: 1;
+  padding: 50px;
+  display: inline;
+  opacity: 1;
+}
+.modal .modalContent span {
+  color: hsl(229, 25%, 31%);
+  font-weight: 800;
+  font-size: 40px;
+}
+.modal .modalContent .close {
+  background-color: white;
+  margin-top: 100px;
 }

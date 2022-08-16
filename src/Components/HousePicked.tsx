@@ -13,15 +13,7 @@ export default function HousePicked(props: any) {
       }}
     >
       <p>THE HOUSE PICKED</p>
-      <div
-        style={{
-          backgroundColor: "#16223f",
-          width: "200px",
-          height: "200px",
-          borderRadius: "100px",
-          marginTop: "50px",
-        }}
-      >
+      <div className="pickedDiv">
         {props.houseSelect === "paper" ? (
           <PaperImage />
         ) : props.houseSelect === "rock" ? (
