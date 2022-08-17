@@ -24,7 +24,7 @@
 
 /* MAIN */
 .emptyUser {
-  margin-top: 150px;
+  margin-top: 120px;
   display: flex;
   place-content: center;
 }
@@ -291,7 +291,7 @@
   .box {
     width: 160px;
     height: 160px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .rulesButton {
     margin-top: 150px;
@@ -368,6 +368,9 @@
 }
 
 @media screen and (max-width: 415px) {
+  .selectedUser {
+    margin-top: 70px;
+  }
   .emptyUser {
     margin-top: 100px;
   }
@@ -414,6 +417,9 @@
   }
 }
 @media screen and (max-width: 400px) {
+  .selectedUser {
+    margin-top: 50px;
+  }
   .emptyUser .triangleImage {
     width: 250px;
     height: 222px;
