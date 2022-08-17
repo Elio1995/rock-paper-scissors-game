@@ -10,6 +10,7 @@ export default function TheGame(props: any) {
         <Header setScore={props.setScore} score={props.score} />
         <Main setScore={props.setScore} score={props.score} />
       </div>
+
       <button
         className="rulesButton"
         onClick={() => {

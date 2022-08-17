@@ -12,7 +12,7 @@ export default function YouPicked(props: any) {
         placeContent: "start",
       }}
     >
-      <p>YOU PICKED</p>
+      <p className="youPicked">YOU PICKED</p>
       <div className="pickedDiv">
         {props.userSelect === "paper" ? (
           <PaperImage />

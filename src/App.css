@@ -209,3 +209,244 @@
   background-color: white;
   margin-top: 100px;
 }
+
+/* RESPONSIVNESS */
+
+@media screen and (max-width: 580px) {
+  .header ul {
+    font-size: 24px;
+  }
+  .emptyUser .paperScissorsGrid {
+    gap: 80px;
+  }
+  .paperImage {
+    padding: 40px;
+    height: 185px;
+    width: 185px;
+  }
+  .scissorsImage {
+    padding: 40px;
+    height: 185px;
+    width: 185px;
+  }
+  .rockImage {
+    padding: 40px;
+    height: 185px;
+    width: 185px;
+  }
+  .pickedDiv,
+  .box {
+    width: 180px;
+    height: 180px;
+    margin-top: 40px;
+  }
+
+  .rulesButton {
+    position: static;
+    margin-top: 100px;
+    place-content: center;
+    justify-content: center;
+  }
+  .modalContent {
+    padding: 30px;
+  }
+  .result p {
+    font-size: 22px;
+  }
+  .result .playAgain {
+    margin: 20px 10px 0 10px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .emptyUser {
+    margin-top: 120px;
+  }
+  .emptyUser .paperScissorsGrid {
+    gap: 70px;
+  }
+  .emptyUser .triangleImage {
+    margin-top: 70px;
+  }
+  .paperImage {
+    border: solid 20px hsl(230, 89%, 65%);
+    padding: 30px;
+    height: 160px;
+    width: 160px;
+  }
+  .scissorsImage {
+    border: solid 20px hsl(39, 89%, 49%);
+    padding: 30px;
+    height: 160px;
+    width: 160px;
+  }
+  .rockImage {
+    border: solid 20px hsl(349, 71%, 52%);
+    padding: 30px;
+    height: 160px;
+    width: 160px;
+  }
+  .pickedDiv,
+  .box {
+    width: 160px;
+    height: 160px;
+    margin-top: 30px;
+  }
+  .rulesButton {
+    margin-top: 150px;
+  }
+  .modalContent {
+    padding: 30px 20px;
+  }
+  .result p {
+    font-size: 18px;
+  }
+  .result .playAgain {
+    margin: 10px 10px 0 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .selectedUser {
+    margin-top: 90px;
+  }
+  .emptyUser .paperScissorsGrid {
+    gap: 60px;
+  }
+  .emptyUser .triangleImage {
+    margin-top: 60px;
+  }
+  .paperImage {
+    border: solid 15px hsl(230, 89%, 65%);
+    padding: 35px;
+    height: 145px;
+    width: 145px;
+  }
+  .scissorsImage {
+    border: solid 15px hsl(39, 89%, 49%);
+    padding: 35px;
+    height: 145px;
+    width: 145px;
+  }
+  .rockImage {
+    border: solid 15px hsl(349, 71%, 52%);
+    padding: 35px;
+    height: 145px;
+    width: 145px;
+  }
+  .pickedDiv,
+  .box {
+    width: 145px;
+    height: 145px;
+  }
+  .rulesButton {
+    margin-top: 100px;
+  }
+  .modalContent {
+    top: 450px;
+    width: 250px;
+    padding: 30px 20px;
+  }
+  .result p {
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .result .playAgain {
+    margin: 10px 10px 0 10px;
+    font-size: 10px;
+    padding: 2px;
+
+    background-color: white;
+    color: hsl(237, 49%, 15%);
+  }
+  .youPicked,
+  .housePicked {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .emptyUser {
+    margin-top: 100px;
+  }
+  .emptyUser .triangleImage {
+    margin-top: 30px;
+  }
+  .emptyUser .paperScissorsGrid {
+    gap: 80px;
+  }
+  .paperImage {
+    padding: 25px;
+    height: 130px;
+    width: 130px;
+  }
+  .scissorsImage {
+    padding: 25px;
+    height: 130px;
+    width: 130px;
+  }
+  .rockImage {
+    padding: 25px;
+    height: 130px;
+    width: 130px;
+  }
+  .pickedDiv,
+  .box {
+    width: 130px;
+    height: 130px;
+  }
+  .result p {
+    font-size: 12px;
+    font-weight: 900;
+  }
+  .result .playAgain {
+    margin: 10px 10px 0 10px;
+    font-size: 10px;
+    padding: 4px;
+    background-color: white;
+    color: hsl(237, 49%, 15%);
+  }
+  .youPicked,
+  .housePicked {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .emptyUser .triangleImage {
+    width: 250px;
+    height: 222px;
+    margin-top: 40px;
+  }
+
+  .emptyUser .paperScissorsGrid {
+    gap: 60px;
+  }
+  .pickedDiv,
+  .box,
+  .paperImage,
+  .scissorsImage,
+  .rockImage {
+    width: 125px;
+    height: 125px;
+  }
+  .modalContent {
+    top: 380px;
+  }
+  .result p {
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .result .playAgain {
+    margin: 10px 5px 0 5px;
+    font-size: 8px;
+    padding: 2px;
+    background-color: white;
+    color: hsl(237, 49%, 15%);
+  }
+  .youPicked,
+  .housePicked {
+    font-size: 12px;
+  }
+}

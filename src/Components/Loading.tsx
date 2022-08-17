@@ -10,7 +10,7 @@ export default function Loading(props: any) {
           placeContent: "end",
         }}
       >
-        <p>THE HOUSE PICKED</p>
+        <p className="housePicked">THE HOUSE PICKED</p>
         <div className="box">
           <div className="container">
             <span className="circle"></span>

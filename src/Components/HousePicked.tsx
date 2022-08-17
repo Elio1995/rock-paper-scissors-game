@@ -12,7 +12,7 @@ export default function HousePicked(props: any) {
         placeContent: "end",
       }}
     >
-      <p>THE HOUSE PICKED</p>
+      <p className="housePicked">THE HOUSE PICKED</p>
       <div className="pickedDiv">
         {props.houseSelect === "paper" ? (
           <PaperImage />
