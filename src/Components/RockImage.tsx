@@ -1,4 +1,5 @@
 import React from "react";
+import rock from "../images/icon-rock.svg";
 import "../App.css";
 
 export default function RockImage(props: any) {
@@ -6,7 +7,7 @@ export default function RockImage(props: any) {
     <>
       <img
         className="rockImage"
-        src="../images/icon-rock.svg"
+        src={rock}
         onClick={() => {
           return props.userSelect === "" ? props.setUserSelect("rock") : "";
         }}

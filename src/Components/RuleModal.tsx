@@ -1,4 +1,6 @@
 import React from "react";
+import rules from "../images/image-rules.svg";
+import close from "../images/icon-close.svg";
 import "../App.css";
 
 export default function RuleModal(props: any) {
@@ -8,12 +10,9 @@ export default function RuleModal(props: any) {
         <div className="modal">
           <div className="modalContent">
             <span>Rules</span>
-            <img
-              style={{ marginTop: "100px" }}
-              src="../images/image-rules.svg"
-            ></img>
+            <img style={{ marginTop: "100px" }} src={rules}></img>
             <button className="close" onClick={props.close}>
-              <img src="../images/icon-close.svg"></img>
+              <img src={close}></img>
             </button>
           </div>
         </div>

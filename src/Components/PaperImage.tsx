@@ -1,4 +1,5 @@
 import React from "react";
+import paper from "../images/icon-paper.svg";
 import "../App.css";
 
 export default function PaperImage(props: any) {
@@ -6,7 +7,7 @@ export default function PaperImage(props: any) {
     <>
       <img
         className="paperImage"
-        src="../images/icon-paper.svg"
+        src={paper}
         onClick={() => {
           return props.userSelect === "" ? props.setUserSelect("paper") : "";
         }}

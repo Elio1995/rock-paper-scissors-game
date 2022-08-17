@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../App.css";
 import HousePicked from "./HousePicked";
 import Loading from "./Loading";
 import PaperImage from "./PaperImage";
@@ -7,6 +6,8 @@ import Result from "./Result";
 import RockImage from "./RockImage";
 import ScissorsImage from "./ScissorsImage";
 import YouPicked from "./YouPicked";
+import triangle from "../images/bg-triangle.svg";
+import "../App.css";
 
 export default function Main(props: any) {
   const [userSelect, setUserSelect] = useState("");
@@ -27,7 +28,7 @@ export default function Main(props: any) {
     <>
       {userSelect === "" ? (
         <div className="emptyUser">
-          <img className="triangleImage" src="../images/bg-triangle.svg"></img>
+          <img className="triangleImage" src={triangle}></img>
           <div style={{ display: "grid", gridTemplateRows: "auto auto" }}>
             <div className="paperScissorsGrid">
               <PaperImage
