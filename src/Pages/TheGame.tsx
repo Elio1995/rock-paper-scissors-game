@@ -7,8 +7,8 @@ export default function TheGame(props: any) {
   return (
     <>
       <div className="App">
-        <Header setScore={props.setScore} score={props.score} />
-        <Main setScore={props.setScore} score={props.score} />
+        <Header />
+        <Main />
       </div>
 
       <button
